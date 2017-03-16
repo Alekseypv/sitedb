@@ -46,8 +46,9 @@ namespace SiteDbApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "SiteID,userName,siteUrl,Description,Date")] Site site)
+        public ActionResult Create([Bind(Include = "SiteID,userName,siteUrl,Description")] Site site)
         {
+            site.Date = DateTime.Now;
             if (ModelState.IsValid)
             {
                 db.Sites.Add(site);

@@ -16,7 +16,7 @@ namespace SiteDbApp
         protected void Application_Start()
         {
 
-          //  Database.SetInitializer<SitesContext>(new SiteInitializer());
+            Database.SetInitializer<SitesContext>(new SiteInitializer());
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
