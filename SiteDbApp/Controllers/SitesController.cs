@@ -9,12 +9,14 @@ using System.Web.Mvc;
 using SiteDbApp.Models;
 
 namespace SiteDbApp.Controllers
-{
+{   [Authorize]
     public class SitesController : Controller
     {
         private SitesContext db = new SitesContext();
 
+        
         // GET: Sites
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View(db.Sites.ToList());
