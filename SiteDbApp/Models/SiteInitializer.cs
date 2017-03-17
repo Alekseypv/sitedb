@@ -6,7 +6,7 @@ using System.Data.Entity;
 
 namespace SiteDbApp.Models
 {
-    public class SiteInitializer :DropCreateDatabaseAlways<SitesContext>
+    public class SiteInitializer :CreateDatabaseIfNotExists<SitesContext>
     {
         protected override void Seed(SitesContext context)
         {

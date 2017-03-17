@@ -6,3 +6,5 @@
 **/bin
 **/obj/Debug
 **/App_Data
+**/obj/Release
+**/.vs
