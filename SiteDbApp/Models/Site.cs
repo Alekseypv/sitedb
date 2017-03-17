@@ -20,6 +20,7 @@ namespace SiteDbApp.Models
         //[Required]
         //public Uri siteUrl { get; set; }
         [Required]
+        [DataType(DataType.Url)]
         public string siteUrl { get; set; }
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
