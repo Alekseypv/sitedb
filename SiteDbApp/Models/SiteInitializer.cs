@@ -27,6 +27,27 @@ namespace SiteDbApp.Models
                     siteUrl ="https://www.bing.com/",
                     Date = DateTime.Today.AddDays(-15),
                     Description = "Bing"
+                },
+                 new Site {
+                    userName = "User2@asd.com",
+                    //siteUrl = new Uri("https://www.bing.com/"),
+                    siteUrl ="https://www.bing.com/",
+                    Date = DateTime.Today.AddDays(-15),
+                    Description = "Bing"
+                },
+                  new Site {
+                    userName = "User3@asd.com",
+                    //siteUrl = new Uri("https://www.bing.com/"),
+                    siteUrl ="https://www.bing.com/",
+                    Date = DateTime.Today.AddDays(-15),
+                    Description = "Bing"
+                },
+                   new Site {
+                    userName = "User4@asd.com",
+                    //siteUrl = new Uri("https://www.bing.com/"),
+                    siteUrl ="https://www.bing.com/",
+                    Date = DateTime.Today.AddDays(-15),
+                    Description = "Bing"
                 }
 
             };

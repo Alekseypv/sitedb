@@ -9,13 +9,16 @@
 <div ng-controller="SitesController as vm">
     <h1> Sites</h1>
     <p><a href="~/Sites/Create">Create New</a></p>
-    <p ng-repeat="sites in vm.sites">
-   
-    </p>
+    SortOrder: 
+    <select ng-model="sortOrder">
+        <option selected="selected"  value="+userName">User Name</option>
+        <option value="+date">Date</option>
+        <option value="+siteUrl">siteUrl</option>
+    </select>
     <table ng-table="vm.tableParams" class="table">
-        <tr ng-repeat="sites in vm.sites">
+        <tr ng-repeat="sites in vm.sites  | orderBy:sortOrder" >
             <td data-title="'User Name'">{{sites.userName}}</td>
-            <td data-title="'Date'">{{sites.date}}</td>
+            <td data-title="'Date'">{{sites.date | date}}</td>
             <td data-title="'Site Url'"><a href="{{sites.siteUrl}}">{{sites.siteUrl}}</a> </td>
             <td>
                 <a href="~/Sites/Edit/{{sites.siteID}}">Edit</a>
